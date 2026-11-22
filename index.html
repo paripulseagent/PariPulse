@@ -1,0 +1,605 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+  <title>PariPulse MFS Agent — Official Agent & Security Deposit Portal</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #0b0e14;
+      color: #f8fafc;
+      overflow-x: hidden;
+    }
+    .glass-card {
+      background: rgba(20, 26, 38, 0.88);
+      backdrop-filter: blur(12px);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+    }
+    .pulse-gradient {
+      background: linear-gradient(135deg, #ff4d4d 0%, #f97316 100%);
+    }
+  </style>
+</head>
+<body class="min-h-screen flex flex-col justify-between antialiased selection:bg-[#ff4d4d] selection:text-white">
+
+  <!-- ================= LANDING & AUTH VIEW ================= -->
+  <div id="landing-view" class="min-h-screen flex flex-col justify-between">
+    
+    <!-- Top Navbar -->
+    <header class="w-full border-b border-white/10 bg-[#0b0e14]/95 sticky top-0 z-20 backdrop-blur-md">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 h-16 sm:h-20 flex items-center justify-between gap-2">
+        <!-- Brand Logo -->
+        <a href="#" class="flex items-center gap-2.5">
+          <div class="w-9 h-9 sm:w-10 sm:h-10 rounded-xl pulse-gradient flex items-center justify-center shadow-lg shadow-[#ff4d4d]/25 shrink-0">
+            <svg class="w-5 h-5 sm:w-6 sm:h-6 text-white" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+            </svg>
+          </div>
+          <div>
+            <div class="flex items-center gap-1.5">
+              <span class="text-lg sm:text-xl font-black tracking-tight text-white">PARI<span class="text-[#ff4d4d]">PULSE</span></span>
+              <span class="px-1.5 py-0.5 text-[9px] sm:text-[10px] font-bold uppercase tracking-wider bg-[#ff4d4d]/15 text-[#ff4d4d] border border-[#ff4d4d]/30 rounded">MFS Agent</span>
+            </div>
+            <p class="hidden sm:block text-[11px] text-slate-400 tracking-wide">Global Payment & Liquidity Network</p>
+          </div>
+        </a>
+
+        <!-- Navigation Links -->
+        <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-slate-300">
+          <a href="#how-it-works" class="hover:text-white transition">How It Works</a>
+          <a href="#login-box" class="hover:text-white transition">Agent Login</a>
+        </nav>
+
+        <!-- CTA -->
+        <div class="flex items-center gap-2">
+          <a href="#login-box"
+            class="px-3.5 py-2 sm:px-4 sm:py-2.5 rounded-xl pulse-gradient text-white text-xs font-bold shadow-md shadow-[#ff4d4d]/20 hover:opacity-95 transition whitespace-nowrap">
+            Agent Sign In
+          </a>
+        </div>
+      </div>
+    </header>
+
+    <!-- Hero & Login Split Section -->
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 py-8 sm:py-12 lg:py-20 grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
+      
+      <!-- Left Hero Content -->
+      <div class="lg:col-span-7 space-y-5 sm:space-y-6 text-center lg:text-left">
+        <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-[#ff4d4d]/10 border border-[#ff4d4d]/30 text-[#ff4d4d] text-[11px] sm:text-xs font-semibold">
+          <span class="w-2 h-2 rounded-full bg-[#ff4d4d] animate-ping shrink-0"></span>
+          <span>Official PariPulse MFS Liquidity Partner Program</span>
+        </div>
+
+        <h1 class="text-3xl sm:text-5xl lg:text-6xl font-black tracking-tight leading-[1.15] text-white">
+          Become a <span class="text-transparent bg-clip-text pulse-gradient">PariPulse MFS Agent</span> & Earn on Every Transaction
+        </h1>
+
+        <p class="text-sm sm:text-lg text-slate-400 max-w-2xl mx-auto lg:mx-0 leading-relaxed">
+          Manage your USDT Security Deposit, process instant player deposits & payouts, and track real-time settlement balances from one dedicated agent dashboard.
+        </p>
+
+        <!-- Key Highlights (Responsive 3-col grid) -->
+        <div class="grid grid-cols-3 gap-2.5 sm:gap-4 pt-2 max-w-xl mx-auto lg:mx-0">
+          <div class="glass-card p-3 sm:p-4 rounded-2xl">
+            <p class="text-lg sm:text-2xl font-black text-white">100%</p>
+            <p class="text-[11px] sm:text-xs text-slate-400 mt-1 leading-tight">USDT Security Protected</p>
+          </div>
+          <div class="glass-card p-3 sm:p-4 rounded-2xl">
+            <p class="text-lg sm:text-2xl font-black text-[#ff4d4d]">24/7</p>
+            <p class="text-[11px] sm:text-xs text-slate-400 mt-1 leading-tight">Instant Deposit & Payout</p>
+          </div>
+          <div class="glass-card p-3 sm:p-4 rounded-2xl">
+            <p class="text-lg sm:text-2xl font-black text-emerald-400">Up to 10%</p>
+            <p class="text-[11px] sm:text-xs text-slate-400 mt-1 leading-tight">Agent Commission</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right Login Card -->
+      <div id="login-box" class="lg:col-span-5 w-full">
+        <div class="glass-card rounded-3xl p-6 sm:p-8 shadow-2xl shadow-black/50">
+          <div class="mb-5 sm:mb-6">
+            <h2 class="text-xl sm:text-2xl font-bold text-white">MFS Agent Login</h2>
+            <p class="text-xs sm:text-sm text-slate-400 mt-1">
+              Sign in with your authorized Agent ID & Password.
+            </p>
+          </div>
+
+          <!-- Error Alert Box -->
+          <div id="login-error" class="hidden mb-4 p-3.5 rounded-xl bg-red-500/15 border border-red-500/30 text-red-400 text-xs font-medium">
+            Invalid Agent ID or Password. Please try again.
+          </div>
+
+          <form id="agent-login-form" class="space-y-4">
+            <div>
+              <label class="block text-xs font-semibold uppercase tracking-wider text-slate-400 mb-1.5">Agent ID</label>
+              <input type="text" id="agent-input" required placeholder="Enter your Agent ID"
+                class="w-full px-4 py-3 rounded-xl bg-[#0b0e14] border border-white/10 text-base sm:text-sm text-white placeholder-slate-500 focus:outline-none focus:border-[#ff4d4d] transition" />
+            </div>
+
+            <div>
+              <label class="block text-xs font-semibold uppercase tracking-wider text-slate-400 mb-1.5">Password</label>
+              <input type="password" id="agent-pass" required placeholder="••••••••"
+                class="w-full px-4 py-3 rounded-xl bg-[#0b0e14] border border-white/10 text-base sm:text-sm text-white placeholder-slate-500 focus:outline-none focus:border-[#ff4d4d] transition" />
+            </div>
+
+            <button type="submit"
+              class="w-full py-3.5 px-4 rounded-xl pulse-gradient text-white font-bold text-sm shadow-lg shadow-[#ff4d4d]/25 hover:opacity-95 active:scale-[0.99] transition cursor-pointer mt-2">
+              Sign In to Agent Portal &rarr;
+            </button>
+          </form>
+
+          <div class="mt-5 pt-4 border-t border-white/10 text-center text-[11px] sm:text-xs text-slate-500">
+            Protected Portal &bull; Authorized PariPulse Agents Only
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- How It Works Section -->
+    <section id="how-it-works" class="border-t border-white/10 bg-[#0e121a] py-12 sm:py-16">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6">
+        <div class="text-center max-w-2xl mx-auto mb-8 sm:mb-12">
+          <h2 class="text-2xl sm:text-3xl font-extrabold text-white">How PariPulse MFS Agent Works</h2>
+          <p class="text-xs sm:text-sm text-slate-400 mt-2">Three simple steps to start managing player transactions backed by USDT security.</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-6">
+          <div class="glass-card p-5 sm:p-6 rounded-2xl">
+            <div class="w-9 h-9 sm:w-10 sm:h-10 rounded-xl bg-[#ff4d4d]/15 text-[#ff4d4d] font-black text-sm flex items-center justify-center mb-3 sm:mb-4">01</div>
+            <h3 class="text-base sm:text-lg font-bold text-white">Deposit Security Money (USDT)</h3>
+            <p class="text-xs sm:text-sm text-slate-400 mt-1.5 leading-relaxed">Fund your agent account with a USDT security deposit to unlock transaction limits.</p>
+          </div>
+          <div class="glass-card p-5 sm:p-6 rounded-2xl">
+            <div class="w-9 h-9 sm:w-10 sm:h-10 rounded-xl bg-[#ff4d4d]/15 text-[#ff4d4d] font-black text-sm flex items-center justify-center mb-3 sm:mb-4">02</div>
+            <h3 class="text-base sm:text-lg font-bold text-white">Deposit & Payout to Players</h3>
+            <p class="text-xs sm:text-sm text-slate-400 mt-1.5 leading-relaxed">Credit player IDs and process USDT payouts instantly through your agent panel.</p>
+          </div>
+          <div class="glass-card p-5 sm:p-6 rounded-2xl">
+            <div class="w-9 h-9 sm:w-10 sm:h-10 rounded-xl bg-[#ff4d4d]/15 text-[#ff4d4d] font-black text-sm flex items-center justify-center mb-3 sm:mb-4">03</div>
+            <h3 class="text-base sm:text-lg font-bold text-white">Track Balance & Earn Up to 10%</h3>
+            <p class="text-xs sm:text-sm text-slate-400 mt-1.5 leading-relaxed">Monitor real-time USDT security balance, deposits, payouts, and agent commissions.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="border-t border-white/10 py-5 px-4 text-center text-[11px] sm:text-xs text-slate-500">
+      &copy; 2026 PariPulse MFS Agent Portal. All rights reserved.
+    </footer>
+  </div>
+
+  <!-- ================= AGENT DASHBOARD VIEW ================= -->
+  <div id="dashboard-view" class="hidden min-h-screen flex flex-col bg-[#0b0e14]">
+    
+    <!-- Dashboard Topbar -->
+    <header class="border-b border-white/10 bg-[#111622]/95 sticky top-0 z-20 backdrop-blur-md">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between gap-2">
+        <div class="flex items-center gap-2 sm:gap-3">
+          <div class="w-8 h-8 rounded-lg pulse-gradient flex items-center justify-center text-white font-black shrink-0">P</div>
+          <span class="font-black text-base sm:text-lg text-white">PARI<span class="text-[#ff4d4d]">PULSE</span></span>
+          <span class="hidden md:inline-block px-2 py-0.5 text-[11px] font-bold bg-emerald-500/15 text-emerald-400 border border-emerald-500/30 rounded">
+            Verified MFS Agent
+          </span>
+        </div>
+
+        <div class="flex items-center gap-2 sm:gap-3">
+          <div class="flex items-center gap-1.5 px-2.5 py-1.5 rounded-lg bg-white/5 border border-white/10 text-[11px] sm:text-xs">
+            <span class="w-1.5 h-1.5 rounded-full bg-emerald-400"></span>
+            <span id="agent-display-name" class="font-bold text-white">AG-88420</span>
+          </div>
+          <button id="logout-btn" type="button"
+            class="px-3 py-1.5 rounded-lg bg-[#ff4d4d] hover:bg-[#e0433c] text-white text-xs font-bold transition cursor-pointer">
+            Logout
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <!-- Dashboard Main Content -->
+    <main class="max-w-7xl w-full mx-auto px-4 sm:px-6 py-6 sm:py-8 flex-grow space-y-6 sm:space-y-8">
+      
+      <!-- Top Action Bar (Mobile-optimized Grid Buttons) -->
+      <div class="flex flex-col lg:flex-row lg:items-center justify-between gap-4">
+        <div>
+          <h1 class="text-xl sm:text-2xl font-extrabold text-white">MFS Agent Overview (USDT)</h1>
+          <p class="text-xs sm:text-sm text-slate-400 mt-0.5">Real-time Security Deposit, Deposits & Payouts ledger</p>
+        </div>
+
+        <div class="grid grid-cols-2 sm:flex sm:flex-wrap items-center gap-2.5 sm:gap-3">
+          <button onclick="openTxModal('deposit')"
+            class="px-3.5 py-3 sm:py-2.5 rounded-xl bg-emerald-600 hover:bg-emerald-500 active:scale-[0.98] text-white text-xs font-bold shadow-lg shadow-emerald-600/20 transition cursor-pointer text-center">
+            + Deposit to Player
+          </button>
+          <button onclick="openTxModal('withdraw')"
+            class="px-3.5 py-3 sm:py-2.5 rounded-xl bg-amber-600 hover:bg-amber-500 active:scale-[0.98] text-white text-xs font-bold shadow-lg shadow-amber-600/20 transition cursor-pointer text-center">
+            - Payout to Player
+          </button>
+          <button onclick="openTxModal('security')"
+            class="col-span-2 sm:col-span-1 px-4 py-3 sm:py-2.5 rounded-xl pulse-gradient active:scale-[0.98] text-white text-xs font-bold shadow-lg shadow-[#ff4d4d]/20 transition cursor-pointer text-center">
+            + Top-Up Security (USDT)
+          </button>
+        </div>
+      </div>
+
+      <!-- 4 Key USDT Financial Cards -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3.5 sm:gap-5">
+        <!-- Security Deposit Card -->
+        <div class="glass-card p-5 sm:p-6 rounded-2xl border-l-4 border-l-[#ff4d4d]">
+          <div class="flex items-center justify-between">
+            <p class="text-xs font-semibold uppercase tracking-wider text-slate-400">Security Deposit</p>
+            <span class="px-2 py-0.5 text-[10px] font-bold rounded bg-[#ff4d4d]/15 text-[#ff4d4d]">USDT</span>
+          </div>
+          <p id="val-security" class="text-2xl sm:text-3xl font-black text-white mt-2.5">$7,000.00 USDT</p>
+          <p class="text-[11px] sm:text-xs text-slate-400 mt-1.5">Locked USDT collateral</p>
+        </div>
+
+        <!-- Total Deposit Card -->
+        <div class="glass-card p-5 sm:p-6 rounded-2xl border-l-4 border-l-emerald-500">
+          <div class="flex items-center justify-between">
+            <p class="text-xs font-semibold uppercase tracking-wider text-slate-400">Total Deposit</p>
+            <span class="px-2 py-0.5 text-[10px] font-bold rounded bg-emerald-500/15 text-emerald-400">USDT</span>
+          </div>
+          <p id="val-deposit" class="text-2xl sm:text-3xl font-black text-emerald-400 mt-2.5">$0.00 USDT</p>
+          <p class="text-[11px] sm:text-xs text-slate-400 mt-1.5">Total deposited to players</p>
+        </div>
+
+        <!-- Total Withdraw Card -->
+        <div class="glass-card p-5 sm:p-6 rounded-2xl border-l-4 border-l-amber-500">
+          <div class="flex items-center justify-between">
+            <p class="text-xs font-semibold uppercase tracking-wider text-slate-400">Total Withdraw</p>
+            <span class="px-2 py-0.5 text-[10px] font-bold rounded bg-amber-500/15 text-amber-400">USDT</span>
+          </div>
+          <p id="val-withdraw" class="text-2xl sm:text-3xl font-black text-amber-400 mt-2.5">$0.00 USDT</p>
+          <p class="text-[11px] sm:text-xs text-slate-400 mt-1.5">Total payouts to players</p>
+        </div>
+
+        <!-- Net Working Balance Card -->
+        <div class="glass-card p-5 sm:p-6 rounded-2xl border-l-4 border-l-sky-500">
+          <div class="flex items-center justify-between">
+            <p class="text-xs font-semibold uppercase tracking-wider text-slate-400">Net Working Balance</p>
+            <span class="px-2 py-0.5 text-[10px] font-bold rounded bg-sky-500/15 text-sky-400">USDT</span>
+          </div>
+          <p id="val-net" class="text-2xl sm:text-3xl font-black text-sky-400 mt-2.5">$0.00 USDT</p>
+          <p class="text-[11px] sm:text-xs text-slate-400 mt-1.5">Active working balance</p>
+        </div>
+      </div>
+
+      <!-- Transaction Ledger Section -->
+      <div class="glass-card rounded-2xl overflow-hidden">
+        <div class="px-4 sm:px-6 py-4 border-b border-white/10 flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+          <div>
+            <h2 class="text-base font-bold text-white">Transaction History (USDT)</h2>
+            <p class="text-xs text-slate-400">Security deposit & player USDT transactions</p>
+          </div>
+          <div class="flex items-center gap-1.5 sm:gap-2 overflow-x-auto pb-1 sm:pb-0">
+            <button onclick="filterTx('all')" class="px-3 py-1.5 rounded-lg bg-white/10 text-xs font-semibold text-white hover:bg-white/20 cursor-pointer shrink-0">All</button>
+            <button onclick="filterTx('Deposit')" class="px-3 py-1.5 rounded-lg bg-emerald-500/10 text-xs font-semibold text-emerald-400 hover:bg-emerald-500/20 cursor-pointer shrink-0">Deposit</button>
+            <button onclick="filterTx('Withdraw')" class="px-3 py-1.5 rounded-lg bg-amber-500/10 text-xs font-semibold text-amber-400 hover:bg-amber-500/20 cursor-pointer shrink-0">Payout</button>
+            <button onclick="filterTx('Security')" class="px-3 py-1.5 rounded-lg bg-[#ff4d4d]/10 text-xs font-semibold text-[#ff4d4d] hover:bg-[#ff4d4d]/20 cursor-pointer shrink-0">Security</button>
+          </div>
+        </div>
+
+        <!-- Desktop Table View (Hidden on small mobile screens) -->
+        <div class="hidden md:block overflow-x-auto">
+          <table class="w-full text-left border-collapse">
+            <thead>
+              <tr class="border-b border-white/10 text-[11px] uppercase tracking-wider text-slate-400 bg-white/[0.02]">
+                <th class="py-3.5 px-6">Transaction ID</th>
+                <th class="py-3.5 px-6">Type</th>
+                <th class="py-3.5 px-6">Details (Player ID / USDT Address)</th>
+                <th class="py-3.5 px-6">Date & Time</th>
+                <th class="py-3.5 px-6 text-right">Amount (USDT)</th>
+                <th class="py-3.5 px-6 text-center">Status</th>
+              </tr>
+            </thead>
+            <tbody id="tx-tbody" class="divide-y divide-white/5 text-sm">
+              <!-- Desktop rows injected by JS -->
+            </tbody>
+          </table>
+        </div>
+
+        <!-- Mobile Card List View (Visible only on mobile/tablet) -->
+        <div id="tx-mobile-list" class="md:hidden divide-y divide-white/10">
+          <!-- Mobile cards injected by JS -->
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <!-- ================= TRANSACTION MODAL (Mobile-Friendly) ================= -->
+  <div id="tx-modal" class="hidden fixed inset-0 z-50 bg-black/80 backdrop-blur-sm flex items-end sm:items-center justify-center p-0 sm:p-4 overflow-y-auto">
+    <div class="glass-card w-full max-w-md rounded-t-3xl sm:rounded-2xl p-5 sm:p-6 shadow-2xl border-t sm:border border-white/15 max-h-[92vh] overflow-y-auto">
+      <div class="flex items-center justify-between mb-4">
+        <h3 id="modal-title" class="text-base sm:text-lg font-bold text-white">Deposit to Player</h3>
+        <button onclick="closeTxModal()" class="w-8 h-8 rounded-full bg-white/5 flex items-center justify-center text-slate-400 hover:text-white text-xl leading-none cursor-pointer">&times;</button>
+      </div>
+
+      <!-- Security Deposit QR & Copy Address Box -->
+      <div id="security-qr-section" class="hidden mb-5 bg-white rounded-2xl p-3.5 sm:p-4 text-slate-900 shadow-inner">
+        <div class="flex flex-col items-center">
+          <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEidU9AvpKhNczeEi-xDEeMqetazulPeiH7Q1vTxvh5vu0IU0j7i8ZwSTZRHRNnY4uhgE7SCvif3OKUuKHLXTnkk4c9nmH1tPhLv_apn2EICpdgMMLQS_gL4-EU5gZllAdn5a7pJQnfFiNO6E57g6gAFBsGdflQxiN7WmYzuJyNWbdFGptELrzE_mQajFOXo/s2526/PariPulse%20Official%20Deposit.jpg.jpeg" alt="Deposit USDT to PariPulse" class="w-44 sm:w-52 h-auto rounded-xl object-contain border border-slate-100" />
+        </div>
+
+        <div class="mt-3 pt-3 border-t border-slate-200 space-y-2 text-xs">
+          <div class="flex items-center justify-between gap-2">
+            <span class="text-slate-500 font-medium">Network</span>
+            <span class="font-bold text-slate-900 text-right">BSC — BNB Smart Chain (BEP20)</span>
+          </div>
+
+          <div>
+            <span class="text-slate-500 font-medium block mb-1">Deposit Address</span>
+            <div class="flex items-center justify-between gap-2 bg-slate-100 border border-slate-200 rounded-xl px-3 py-2">
+              <code id="usdt-deposit-address" class="text-[11px] font-mono font-semibold text-slate-800 break-all select-all">0x014dc05272d730e05ef449cc11590180c8ce006d</code>
+              <button type="button" id="copy-address-btn" onclick="copyDepositAddress()"
+                class="shrink-0 px-3 py-1.5 rounded-lg bg-[#ff4d4d] hover:bg-[#e0433c] text-white text-[11px] font-bold transition cursor-pointer">
+                Copy
+              </button>
+            </div>
+          </div>
+
+          <p class="text-[11px] text-slate-400 text-center pt-1">Don't send NFTs to this address.</p>
+        </div>
+      </div>
+
+      <form id="tx-form" class="space-y-4">
+        <input type="hidden" id="tx-type-input" value="Deposit" />
+        <div>
+          <label class="block text-xs font-semibold text-slate-400 uppercase mb-1">Amount (USDT)</label>
+          <input type="number" step="0.01" min="1" id="tx-amount-input" required placeholder="e.g. 100.00"
+            class="w-full px-4 py-3 rounded-xl bg-[#0b0e14] border border-white/10 text-white text-base sm:text-sm focus:outline-none focus:border-[#ff4d4d]" />
+        </div>
+        <div>
+          <label id="tx-ref-label" class="block text-xs font-semibold text-slate-400 uppercase mb-1">Player ID</label>
+          <input type="text" id="tx-ref-input" required placeholder="Enter Player ID (e.g. 94827105)"
+            class="w-full px-4 py-3 rounded-xl bg-[#0b0e14] border border-white/10 text-white text-base sm:text-sm focus:outline-none focus:border-[#ff4d4d]" />
+        </div>
+        <div class="grid grid-cols-2 sm:flex sm:justify-end gap-2.5 pt-2">
+          <button type="button" onclick="closeTxModal()" class="px-4 py-3 sm:py-2 rounded-xl bg-white/5 text-slate-300 text-xs font-semibold hover:bg-white/10 cursor-pointer">Cancel</button>
+          <button type="submit" id="modal-submit-btn" class="px-5 py-3 sm:py-2 rounded-xl pulse-gradient text-white text-xs font-bold cursor-pointer">Send</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <script>
+    // ==========================================
+    // SET YOUR AUTHORIZED AGENT ID & PASSWORD
+    // ==========================================
+    const VALID_AGENT_ID = "AG-88420";
+    const VALID_PASSWORD = "PariPulse@2026";
+    // ==========================================
+
+    let currentFilter = 'all';
+
+    // Exact Initial USDT Balances
+    let securityDeposit = 7000.00;
+    let totalDeposit = 0.00;
+    let totalWithdraw = 0.00;
+
+    // Initial History: Only Security Deposit $7,000.00 USDT
+    const transactions = [
+      {
+        id: 'TXN-70001',
+        type: 'Security',
+        detail: 'Initial Security Deposit (USDT)',
+        date: '2026-11-22 18:00',
+        amount: 7000.00,
+        status: 'Verified'
+      }
+    ];
+
+    function formatUSDT(num) {
+      return '$' + num.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 }) + ' USDT';
+    }
+
+    function updateBalances() {
+      const netWorkingBalance = totalDeposit - totalWithdraw;
+      document.getElementById('val-security').textContent = formatUSDT(securityDeposit);
+      document.getElementById('val-deposit').textContent = formatUSDT(totalDeposit);
+      document.getElementById('val-withdraw').textContent = formatUSDT(totalWithdraw);
+      document.getElementById('val-net').textContent = formatUSDT(netWorkingBalance);
+    }
+
+    function renderTransactions() {
+      const tbody = document.getElementById('tx-tbody');
+      const mobileList = document.getElementById('tx-mobile-list');
+
+      const filtered = currentFilter === 'all'
+        ? transactions
+        : transactions.filter(t => t.type === currentFilter);
+
+      // Render Desktop Table Rows
+      tbody.innerHTML = filtered.map(tx => {
+        const badgeStyle = tx.type === 'Deposit'
+          ? 'bg-emerald-500/15 text-emerald-400 border-emerald-500/30'
+          : tx.type === 'Withdraw'
+          ? 'bg-amber-500/15 text-amber-400 border-amber-500/30'
+          : 'bg-[#ff4d4d]/15 text-[#ff4d4d] border-[#ff4d4d]/30';
+
+        const typeLabel = tx.type === 'Withdraw' ? 'Payout' : tx.type;
+        const amountColor = tx.type === 'Withdraw' ? 'text-amber-400' : 'text-emerald-400';
+        const sign = tx.type === 'Withdraw' ? '-' : '+';
+
+        return `
+          <tr class="hover:bg-white/[0.02] transition">
+            <td class="py-3.5 px-6 font-mono text-xs text-slate-300">${tx.id}</td>
+            <td class="py-3.5 px-6">
+              <span class="px-2.5 py-0.5 text-xs font-bold rounded border ${badgeStyle}">${typeLabel}</span>
+            </td>
+            <td class="py-3.5 px-6 text-slate-200 font-medium">${tx.detail}</td>
+            <td class="py-3.5 px-6 text-xs text-slate-400">${tx.date}</td>
+            <td class="py-3.5 px-6 text-right font-bold ${amountColor}">${sign}${formatUSDT(tx.amount)}</td>
+            <td class="py-3.5 px-6 text-center">
+              <span class="text-xs text-emerald-400 font-medium">● ${tx.status}</span>
+            </td>
+          </tr>
+        `;
+      }).join('');
+
+      // Render Mobile Cards
+      mobileList.innerHTML = filtered.map(tx => {
+        const badgeStyle = tx.type === 'Deposit'
+          ? 'bg-emerald-500/15 text-emerald-400 border-emerald-500/30'
+          : tx.type === 'Withdraw'
+          ? 'bg-amber-500/15 text-amber-400 border-amber-500/30'
+          : 'bg-[#ff4d4d]/15 text-[#ff4d4d] border-[#ff4d4d]/30';
+
+        const typeLabel = tx.type === 'Withdraw' ? 'Payout' : tx.type;
+        const amountColor = tx.type === 'Withdraw' ? 'text-amber-400' : 'text-emerald-400';
+        const sign = tx.type === 'Withdraw' ? '-' : '+';
+
+        return `
+          <div class="p-4 space-y-2.5">
+            <div class="flex items-center justify-between">
+              <div class="flex items-center gap-2">
+                <span class="px-2 py-0.5 text-[11px] font-bold rounded border ${badgeStyle}">${typeLabel}</span>
+                <span class="font-mono text-xs text-slate-400">${tx.id}</span>
+              </div>
+              <span class="text-xs text-emerald-400 font-medium">● ${tx.status}</span>
+            </div>
+            <p class="text-sm font-semibold text-white break-all">${tx.detail}</p>
+            <div class="flex items-center justify-between pt-1">
+              <span class="text-[11px] text-slate-400">${tx.date}</span>
+              <span class="text-sm font-black ${amountColor}">${sign}${formatUSDT(tx.amount)}</span>
+            </div>
+          </div>
+        `;
+      }).join('');
+    }
+
+    function filterTx(type) {
+      currentFilter = type;
+      renderTransactions();
+    }
+
+    // Strict Login Validation
+    document.getElementById('agent-login-form').addEventListener('submit', (e) => {
+      e.preventDefault();
+      const enteredId = document.getElementById('agent-input').value.trim();
+      const enteredPass = document.getElementById('agent-pass').value;
+      const errorBox = document.getElementById('login-error');
+
+      if (enteredId === VALID_AGENT_ID && enteredPass === VALID_PASSWORD) {
+        errorBox.classList.add('hidden');
+        document.getElementById('agent-display-name').textContent = enteredId;
+        document.getElementById('landing-view').classList.add('hidden');
+        document.getElementById('dashboard-view').classList.remove('hidden');
+        window.scrollTo(0, 0);
+        updateBalances();
+        renderTransactions();
+      } else {
+        errorBox.classList.remove('hidden');
+      }
+    });
+
+    document.getElementById('logout-btn').addEventListener('click', () => {
+      document.getElementById('agent-pass').value = '';
+      document.getElementById('dashboard-view').classList.add('hidden');
+      document.getElementById('landing-view').classList.remove('hidden');
+      window.scrollTo(0, 0);
+    });
+
+    // Copy USDT Address Function
+    function copyDepositAddress() {
+      const addressText = document.getElementById('usdt-deposit-address').textContent.trim();
+      const copyBtn = document.getElementById('copy-address-btn');
+
+      navigator.clipboard.writeText(addressText).then(() => {
+        copyBtn.textContent = 'Copied!';
+        copyBtn.classList.remove('bg-[#ff4d4d]');
+        copyBtn.classList.add('bg-emerald-600');
+        setTimeout(() => {
+          copyBtn.textContent = 'Copy';
+          copyBtn.classList.remove('bg-emerald-600');
+          copyBtn.classList.add('bg-[#ff4d4d]');
+        }, 2000);
+      });
+    }
+
+    // Modal Handlers
+    function openTxModal(type) {
+      const modal = document.getElementById('tx-modal');
+      const title = document.getElementById('modal-title');
+      const typeInput = document.getElementById('tx-type-input');
+      const refLabel = document.getElementById('tx-ref-label');
+      const refInput = document.getElementById('tx-ref-input');
+      const submitBtn = document.getElementById('modal-submit-btn');
+      const qrSection = document.getElementById('security-qr-section');
+
+      if (type === 'deposit') {
+        qrSection.classList.add('hidden');
+        typeInput.value = 'Deposit';
+        title.textContent = 'Deposit to Player';
+        refLabel.textContent = 'Player ID';
+        refInput.placeholder = 'Enter Player ID (e.g. 94827105)';
+        submitBtn.textContent = 'Send';
+      } else if (type === 'withdraw') {
+        qrSection.classList.add('hidden');
+        typeInput.value = 'Withdraw';
+        title.textContent = 'Payout to Player';
+        refLabel.textContent = 'Payout to USDT';
+        refInput.placeholder = 'Enter USDT Wallet Address (TRC20 / BEP20)';
+        submitBtn.textContent = 'Send';
+      } else {
+        qrSection.classList.remove('hidden');
+        typeInput.value = 'Security';
+        title.textContent = 'Deposit USDT to PariPulse';
+        refLabel.textContent = 'USDT TXID / Hash';
+        refInput.placeholder = 'Enter Transaction Hash after sending USDT';
+        submitBtn.textContent = 'Confirm Top-Up';
+      }
+      modal.classList.remove('hidden');
+    }
+
+    function closeTxModal() {
+      document.getElementById('tx-modal').classList.add('hidden');
+      document.getElementById('tx-form').reset();
+    }
+
+    document.getElementById('tx-form').addEventListener('submit', (e) => {
+      e.preventDefault();
+      const type = document.getElementById('tx-type-input').value;
+      const amount = parseFloat(document.getElementById('tx-amount-input').value);
+      const refValue = document.getElementById('tx-ref-input').value.trim();
+
+      if (isNaN(amount) || amount <= 0) return;
+
+      let formattedDetail = refValue;
+      if (type === 'Deposit') {
+        totalDeposit += amount;
+        formattedDetail = 'Player ID: ' + refValue;
+      } else if (type === 'Withdraw') {
+        totalWithdraw += amount;
+        formattedDetail = 'Payout to USDT: ' + refValue;
+      } else if (type === 'Security') {
+        securityDeposit += amount;
+        formattedDetail = 'BEP20 Top-Up TXID: ' + refValue;
+      }
+
+      const now = new Date();
+      const formattedDate = now.toISOString().slice(0, 16).replace('T', ' ');
+      const randomId = 'TXN-' + Math.floor(10000 + Math.random() * 90000);
+
+      transactions.unshift({
+        id: randomId,
+        type: type,
+        detail: formattedDetail,
+        date: formattedDate,
+        amount: amount,
+        status: type === 'Security' ? 'Verified' : 'Completed'
+      });
+
+      updateBalances();
+      renderTransactions();
+      closeTxModal();
+    });
+  </script>
+</body>
+</html>
